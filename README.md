@@ -1,9 +1,8 @@
-My first website project
+beginner portfolio website
 
-pages:
-- Home
-- Goals
-- Contacts
-- Skills
-
-Built using html
+Technologies used : 
+- HTML
+- Basic forms
+- Tables
+- Lists
+- Images
