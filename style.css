@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(210, 226, 226);
+    font-family:Arial;
+}
+
+h1{
+    colour:black;
+    text-align:center;
+}
+
+h2{
+    color:black;
+}
+
+
+p{
+    font-size:18px;
+}
