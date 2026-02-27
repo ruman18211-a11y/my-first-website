@@ -16,3 +16,27 @@ h2{
 p{
     font-size:18px;
 }
+
+            /* day 10 of coding content  by default margin left hoti h*/
+
+h1{
+    margin-top:60px;
+}
+
+p{
+    margin-left:20px;
+}
+
+img{
+    margin-left:20px;
+    border:8px groove rgb(103, 92, 103);
+}
+
+table{
+    margin:20px;
+    border:4px inset black;
+}
+
+div{
+    padding:20px;   
+}
