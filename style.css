@@ -17,7 +17,8 @@ p{
     font-size:18px;
 }
 
-            /* day 10 of coding content  by default margin left hoti h*/
+                          /* day 10 of coding content*/
+
 
 h1{
     margin-top:60px;
@@ -38,5 +39,30 @@ table{
 }
 
 div{
-    padding:20px;   
+    padding:2px;   /*background or border nahi hai to padding margin jaisa kam krta h top,bottom,left,right har traf padding applt hoja ga*/
+}
+
+
+                         /* Day 11 of coding content*/
+
+
+ul{
+    list-style: none;  
+    padding:0;          /*  ye list ki padding hai*/
+    background-color:lightgray;
+    padding:10px;       /*  ye background color ki padding hai*/
+}
+
+li{
+    display:inline;
+    padding:10px;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+a:hover{
+    color:rgb(111, 111, 235);
 }
