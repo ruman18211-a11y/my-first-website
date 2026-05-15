@@ -4,7 +4,7 @@ body{
 }
 
 h1{
-    colour:black;
+    color:black;
     text-align:center;
 }
 
@@ -17,8 +17,8 @@ p{
     font-size:18px;
 }
 
-                          /* day 10 of coding content*/
 
+                          /* day 10 of coding content*/
 
 h1{
     margin-top:60px;
@@ -48,40 +48,70 @@ div{
 
 
 
-                         /* Day 11 of coding content*/
 
 
-ul{
+
+/*ye cheez maine sayad day 12 me sikha ki ham kisi bhi content me div tag laga kr use box ki taraha use kr sakte hai by default child box rahega*/
+
+.Sbody{
+    margin-top:0px;       /*ye jo pura content nav bar se leke last divide tha usko maine name deke top me outside space de diya*/
+}
+
+.tittle{
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+                         /* Day 11 of coding content */  
+
+.navbar ul{
     list-style: none;  
     padding:0;          /*  ye list ki padding hai*/
-    background-color:rgb(191, 187, 187);
-    padding:10px;       /*  ye background color ki padding hai*/
+    background-color:rgb(139, 104, 104);
+    padding:10px;       /*  ye background color ki padding hai  items ke 10px around color jayega*/
 }
 
-li{
-    display:inline;
-    padding:10px;
+.navbar li{
+    display:inline;    /*ek line me item aa jaye ga   or paddind= items ke around (outside)10px ka gap aaajaye ga*/ 
+    padding:100px;      
 }
 
-a{
+.navbar a{
     text-decoration:none;     /*text docration isi liye lagate hai jaisa ancor tag me home hai to usme underline kiya huya ata hai usko hatane k liye*/
     color: black;
 }
 
-a:hover{
+.navbar a:hover{
     color:rgb(54, 54, 193);
 }
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+ 
+}
+
+
+
 
 /* day 12 flexbox styling*/
 
 .box-container{
     border:2px solid black;
     display:flex;
-    justify-content:center;   /*space-between*/
+    justify-content:space-between;   /*space-between*/
 /*tum khud se bhi box container ki height set kr sakte ho , ex) height 300px; or isme tum (align-items:center); kro but but bydefault content ke size ke hisab se adjust hota hai isme align items lagane ki zrurat nahi*/
-    gap:200px;
+   /* gap:20px;
    flex-direction: column;
-   align-items:center;
+   align-items:center;*/
 }
 
 .box{
@@ -92,3 +122,72 @@ a:hover{
     padding:20px;  /*jo box ke andr likha hao wo beech me ayega*/
     margin:20px;    /* it creates space between boxes*/
 }
+
+
+
+
+/* day 13 responsive design  using media query*/
+
+@media (max-width: 600px){
+    body{
+        background-color: yellow;
+    }
+
+    .box-container{
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        justify-content:center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+       
+    }
+    .navbar li{
+        margin:10px ;
+    }
+}
+
+
+/*day 14 - positioning + responsive navbar design*/
+
+.parent{            /*isme parent box hai aur uske andr child box aur child box using parentnt box as a relative space and we are moving child box using absolute postion*/
+    height:500px;
+    width:500px;
+    border:2px solid black;
+    position:relative;              
+} 
+.child{
+    height:50px;
+    width:50px;
+    border:2px solid black;
+    
+    position:absolute;      /*  ek sath mat use kro use kro top+right,left  & bottom+right,left  */
+    right:230px;
+    bottom:150px;
+}
+
+.rbox{                   /*ye relative box hai means parent box or is ham pura move krwa re hai ham direct screen pr screen=parent rbox=child*/
+    height:200px;                        /*  parent = refrence area   */
+    width:300px;                         /*  child  = child uses parent size as refrence   */
+    border:2px solid black;
+
+    position:relative;
+
+    top:50px;
+    left:500px;
+    margin-bottom:60px;
+
+}
+
+/* or  position:fixed hamne apne navbar me use kiya  to tittle chip gaya tha to title me div tag lagaya name diya fir usko marging-top:60px; kra*/
+
+

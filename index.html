@@ -1,26 +1,27 @@
 <!Doctype html>
 <html>
     <head>
-        <tittle>Ruman portfolio</tittle>
+       <div class="tittle"><tittle>Ruman portfolio</tittle></div> 
 
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ye add krna padega 1st agar mobile me acche se chalana hai nahi to @media me likha huya sahi se nahi chalega-->
     </head>
     <body>
              <!--Day 11th of coding content-->
 
-             
+ <nav class="navbar">                                                    <!-- <nav> tag hamesa use kr iso css me style krne ke liye-->
 <ul>
     <li><a href="index.html" target="-blank">HOME</a> </li>
     <li><a href="goals.html" target="_blank"> GOALS</a></li>
     <li><a href="contact.html" target="_blank"> CONTACT ME</a> </li>
     <li><a href="myskills.html" target="_blank"> MY SKILLS</a></li>
 </ul>
-
+</nav> 
 
 
                  <!-- day 10 content <div> tag-->
 
-<div>                <!--div tab ayese samjho ek bada box hai (body) or ek chota box uske andr (h1 to h2) to padding in dono ke beech me space dega -->
+<div class="Sbody">                <!--div tab ayese samjho ek bada box hai (body) or ek chota box uske andr (h1 to h2) to padding in dono ke beech me space dega -->
 <h1>My Name is Ruman khan</h1>
 <p>I am a Aspiring full stack developer</p>
     <hr>
@@ -125,7 +126,21 @@
 </div>
 
 
+<hr>
 
 
-    </body>
-</html>
+<!--day 14 - positioning + responsive navbar design-->
+
+<!--1st)-->
+    <div class="parent">                    <!--  parent = refrence area   -->
+        <div class="child">box</div>        <!--  child  = child uses parent size as refrence   -->
+</div>
+
+
+<!--2nd) --> 
+    <div class="rbox">
+         relative box </div>
+
+<!--3rd) position:fixed apne navbar me use kr-->
+
+
