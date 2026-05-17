@@ -87,12 +87,16 @@ div{
 .navbar a{
     text-decoration:none;     /*text docration isi liye lagate hai jaisa ancor tag me home hai to usme underline kiya huya ata hai usko hatane k liye*/
     color: black;
+    transition: 1s;          /*day 15 */
+    display:inline-block;    /*day 15 transform kabhi kkam nahi krta beacouse <a> is inline */
 }
 
 .navbar a:hover{
-    color:rgb(54, 54, 193);
+    color:rgb(70, 70, 169);
+    transform:scale(1.2,1.3);                              /*day 15 hover anchor tag me use ktw hai kyu ki clickable links hote hai jisme ham  hover effect dal sakte h*/
 }
-.navbar{
+
+.navbar{                    /*DAY 14 CODING CONTENT KA HAI*/
     position:fixed;
     top:0;
     width:100%;
@@ -104,7 +108,7 @@ div{
 
 /* day 12 flexbox styling*/
 
-.box-container{
+.box-container{                   
     border:2px solid black;
     display:flex;
     justify-content:space-between;   /*space-between*/
@@ -163,8 +167,10 @@ div{
     height:500px;
     width:500px;
     border:2px solid black;
-    position:relative;              
+    position:relative;    
+
 } 
+
 .child{
     height:50px;
     width:50px;
@@ -174,6 +180,8 @@ div{
     right:230px;
     bottom:150px;
 }
+
+
 
 .rbox{                   /*ye relative box hai means parent box or is ham pura move krwa re hai ham direct screen pr screen=parent rbox=child*/
     height:200px;                        /*  parent = refrence area   */
@@ -185,9 +193,63 @@ div{
     top:50px;
     left:500px;
     margin-bottom:60px;
+     display:flex;
+    justify-content: center;
+    align-items:center;
 
 }
 
 /* or  position:fixed hamne apne navbar me use kiya  to tittle chip gaya tha to title me div tag lagaya name diya fir usko marging-top:60px; kra*/
 
+
+
+
+/* day 15 content transform and transition*/
+
+
+/* 1st) container ka basics kro 2nd) box ka basics kro aur fir transform lagao 
+   3rd) agar smmoth transition chaiye to hover banao (.zoom-box:hover= hover hone pr kya change hoga) aur usme transform apply kr*/
+
+.zoom-box{
+    height:50px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid purple;
+    background-color: aqua;
+    transition: 3s;
+}
+.zoom-boxB{
+    height:50px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid purple;
+    background-color: aqua;
+    transition: 3s;
+}
+.zoom-boxB:hover{
+    transform:rotateX(360deg);
+}
+
+.zoom-box:hover{                   
+    /*transform: translate(3cm,4cm);*/       /*(500px) or (2cm,3cm)  2cm in x direction and 3cm in y (bydefault and translateX horizontaly move kre ga box ko) and (y vertically */
+    /*transform:rotate(180deg);*/        /*try kro rotateX,y and  h*/
+    transform:scale(2,2);
+}
+
+
+
+.container{
+    height:300px;  
+    width:95vw;
+    border:2px solid rgb(124, 84, 48);   
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap:30px;
+}
 
