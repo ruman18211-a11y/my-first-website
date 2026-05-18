@@ -228,7 +228,7 @@ div{
     align-items: center;
     border: 2px solid purple;
     background-color: aqua;
-    transition: 3s;
+    transition: 3s;                  /* transition simple hover effect ke liye & animation complex ke liyez*/
 }
 .zoom-boxB:hover{
     transform:rotateX(360deg);
@@ -240,8 +240,6 @@ div{
     transform:scale(2,2);
 }
 
-
-
 .container{
     height:300px;  
     width:95vw;
@@ -252,4 +250,84 @@ div{
     flex-direction:column;
     gap:30px;
 }
+
+
+
+
+
+/*day 16 content css animation   (sab asan hai isme ek hi kaam ko ham halca edit kr ke kr re)*/
+
+
+.parent-box{
+    height:500px;
+    width:95vw;
+    border:2px solid black;
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    height:40px;
+    width:40px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+/*  animation: name  duration timing-function delay iteration-count direction fill-mode;    sb ke bare me search kr  */
+    animation: rumansAnimation 4s ease-out 0.1s 2 ,
+               rumansAnimationIn-percent 4s ease-in-out 0.5s 1;
+}
+
+
+
+@keyframes rumansAnimation{
+    from{
+        background-color: aqua;
+    }
+    to{
+        /*transform: rotate(360deg);     agar ek hi anikmation use kr rahe ho to isi lagao warna agar 2 animation use kr rahe ho to ye ek duse me overlap krega isis liye comment out kr diya*/  
+        /*transform:scale(2,2);*/
+        background-color: rgb(115, 83, 141);
+    }
+}
+
+/*ek hi element pr ham muliple animations kr sakte hai*/
+@keyframes rumansAnimationIn-percent{          
+
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(200px,0);
+    }
+    50%{
+        transform: translate(200px,200px); border-radius:50% ;
+    }
+    75%{
+        transform: translate(0,200px);
+    }
+    100%{
+        transform:translate(0,0)
+    }
+}
+
+
+/*opacity*/
+.text{
+    animation: opacity 4s ease 1;
+    margin: 0;       
+}
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
 
