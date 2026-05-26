@@ -255,7 +255,7 @@ div{
 
 
 
-/*day 16 content css animation   (sab asan hai isme ek hi kaam ko ham halca edit kr ke kr re)*/
+/*day 16 content css animation   (sab asan hai isme ek hi format pr kam multiple time kam kar se) a bit same as transition but better*/
 
 
 .parent-box{
@@ -314,8 +314,7 @@ div{
     }
 }
 
-
-/*opacity*/
+/*opacity  (jo child box me content tha pahele usko class name deke <p> bnaya fir css me animation laga diya uspe animation use krke )*/
 .text{
     animation: opacity 4s ease 1;
     margin: 0;       
@@ -331,3 +330,109 @@ div{
 
 
 
+
+
+/*day 17 - CSS grid (a bit same as flexbox but a lot better)*/
+
+.parent-box-grid{
+    margin-top:20px;
+    border:2px solid black;
+    display:grid;
+    grid-template-columns:100px 100px 100px;  /* u can use (1fr 1fr 1fr) ye width me jitni bhi jagha hogi uska 3 hissa kr dega matlab 1fraction mere do 1 isko 1 usko*/ 
+    grid-template-rows:100px 100px;
+}
+
+.item{
+    height:30px;
+    /*width:30px;  (box to strech krne h to chaudai ki limit to hatani padigi)*/
+    border:3px solid rgb(37, 137, 150);
+    margin:10px;
+
+}
+
+
+/*boxes ko uski jagaha pe se kahi bhi rakh sakte 
+hai agr duse box ki jagha pe rakhe ge to wo wla box slide hojayega nahuya huya 1more kr(boxes ki position ko reverse kr diya)*/
+
+.item-5{   
+    grid-row: 1/2;
+    grid-column:1/2;
+}
+.item-5{
+    grid-row: 1/2;
+    grid-column:1/2;
+}
+
+.item-4{
+    grid-column: 2/3;
+    grid-row:1/2;
+}
+.item-3{
+    grid-column: 3/4;
+    grid-row:1/2;
+}
+.item-2{                       /*isko pure row column and anpe row ki jagha de diya*/
+    grid-column: 1/4;
+    grid-row:2/3;
+}
+.item-1{                     /*fir man kiya ti 1 ko beech me ghusa diya maine*/
+    grid-column: 2/3;
+    grid-row:2/3;
+}
+
+
+
+                              /* grid 2 */
+
+.parent-box-grid{
+    background-color: aqua;
+    height:500px;
+    width:95vw;
+    margin-top:10px;
+    border:3px solid black;
+    gap:10px;
+    display:grid;
+    grid-template-areas: "header footer footer"
+                         "nav nav nav"
+                         "hi hi bye";
+    justify-items: center;  /* (items) grid cell ki andr hi center me dal dega   or  (content) parent box ka jo area hai uske beech me kre ga */
+    align-items: center;
+}
+
+.item{
+    height:30px;
+    border:2px solid black;
+    gap:10px;
+}
+
+
+.item-1{
+    grid-area:footer;
+}
+.item-2{
+    grid-area:nav;
+}
+.item-3{
+    grid-area:header;
+}
+.item-4{
+    grid-area:hi;
+}
+.item-5{
+    grid-area:bye;
+}
+
+
+
+/* (((important)))       in mobile it would arranged in center for grid 1*/
+
+@media (max-width: 600px){
+    .parent-box-grid{
+        grid-template-columns: 1fr;
+    }
+    .item{
+        grid-column: auto;
+        grid-row: auto;
+
+    }
+}
